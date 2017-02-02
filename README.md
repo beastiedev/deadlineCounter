@@ -8,7 +8,7 @@ Simple countdown timer. It calculates how much time is left.
 
 ### Usage
 
-##### Fast and rough - [demo](https://jsfiddle.net/4fjmxw7y/1/)
+##### Fast and rough - [demo](https://jsfiddle.net/4fjmxw7y/2/)
 
 Add empty block with some id
 ```html
@@ -21,4 +21,4 @@ var dl = new DeadlineCounter('11 Feb 2017 17:00:00', 'dl');
 dl.count();
 ```
 
-##### More accurate - [demo](https://jsfiddle.net/4fjmxw7y/2/)
+##### More accurate - [demo](https://jsfiddle.net/4fjmxw7y/1/)

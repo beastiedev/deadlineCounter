@@ -92,7 +92,6 @@ var DeadlineCounter = (function() {
 
 })();
 
-/* new instance of DeadlineCounter */
+/* create new instance of DeadlineCounter and run */
 var dl1 = new DeadlineCounter('11 Feb 2017 17:00:00', 'dl1');
-/* run, result in console */
 dl1.count();

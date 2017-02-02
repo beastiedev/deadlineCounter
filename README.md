@@ -1,9 +1,14 @@
 # deadlineCounter
 Simple countdown timer. It calculates how much time is left.
 
+
+![deadlineCounter example1](https://github.com/beastiedev/deadlineCounter/blob/master/ex1.png "deadlineCounter example1")
+
+![deadlineCounter example2](https://github.com/beastiedev/deadlineCounter/blob/master/ex2.png "deadlineCounter example2")
+
 ### Usage
 
-1. Fast and rough - [demo](https://jsfiddle.net/4fjmxw7y/1/)
+##### Fast and rough - [demo](https://jsfiddle.net/4fjmxw7y/1/)
 
 Add empty block with some id
 ```html
@@ -16,5 +21,4 @@ var dl = new DeadlineCounter('11 Feb 2017 17:00:00', 'dl');
 dl.count();
 ```
 
-
-2. More accurate - [demo](https://jsfiddle.net/4fjmxw7y/2/)
+##### More accurate - [demo](https://jsfiddle.net/4fjmxw7y/2/)

@@ -3,9 +3,81 @@
 <head>
     <title>Dealine Counter Demo</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="deadlineCounter.js"></script>
+    <style>
+        body {
+            font-family: arial, verdana, sans-serif
+        }
+        .dl-counter {
+            margin: 0 auto;
+            text-align: center;
+            font-size: 2em;
+
+        }
+        .time-item {
+            display: inline-block;
+        }
+        .title {
+            font-size: 0.5em;
+        }
+        .total {
+            width: 300px;
+            margin: 20px auto;
+        }
+        .total div {
+            margin: 5px 10px;
+        }
+    </style>
 </head>
     <body>
-        <div id="dl1"></div>
+        <div class="dl-counter">
+            <div id="dl1"></div>
+            <!-- consider period more then year -->
+            <div class="time-item">
+                <div class="value" id="formatYear"></div>
+                <div class="title">year(s)</div>
+            </div>
+            <div class="time-item">
+                <div class="value" id="formatDay"></div>
+                <div class="title">day(s)</div>
+            </div>
+            <div class="time-item">
+                <div class="value" id="formatHour"></div>
+                <div class="title">hour(s)</div>
+            </div>
+            <div class="time-item">
+                <div class="value" id="formatMin"></div>
+                <div class="title">minute(s)</div>
+            </div>
+            <div class="time-item">
+                <div class="value" id="formatSec"></div>
+                <div class="title">second(s)</div>
+            </div>
+
+        </div>
+        <div class="total">
+            <div>total seconds: <span id="totalSec"></span></div>
+            <div>total minutes: <span id="totalMin"></span></div>
+            <div>total hours: <span id="totalHour"></span></div>
+            <div>total days: <span id="totalDay"></span></div>
+            <div>total years: <span id="totalYear"></span></div>
+        </div>
+        <script>
+            var dl1 = new DeadlineCounter('11 Feb 2017 17:00:00', 'dl1');
+            function domApply(obj) {
+                for (var item in obj) {
+                    var el = document.getElementById(item);
+                    if (el) {
+                        el.innerHTML = obj[item];
+                    }
+                }
+            }
+            domApply(dl1.calcDeadlineObject());
+            setInterval(function() {
+                domApply(dl1.calcDeadlineObject())
+            }, 1000);
+            dl1.count();
+        </script>
     </body>
 </html>

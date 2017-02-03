@@ -35,6 +35,7 @@ var DeadlineCounter = (function() {
      */
     DeadlineCounter.prototype.calcDeadlineObject = function() {
         var diff = Math.floor(this.getDiffTimestamp()/1000);
+        if (diff < 0) diff = 0;
         return {
             totalSec: (diff).toFixed(),
             totalMin: (diff/60).toFixed(),
